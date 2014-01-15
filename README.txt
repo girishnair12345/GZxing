@@ -31,7 +31,7 @@ Add this activity also
               android:stateNotNeeded="true"
               android:configChanges="orientation|keyboardHidden"
               android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-              android:windowSoftInputMode="stateAlwaysHidden">
+              android:windowSoftInputMode="stateAlwaysHidden"/>
 			  
 
 Create an instance
@@ -71,11 +71,11 @@ etc
 
 To Create a barcode
 Get the instance
-GZxingEncoder 	Encoder = GZxingEncoder.getInstance();
-Encoder.initalize(this);
+GZxingEncoder 	encoder = GZxingEncoder.getInstance();
+encoder.initalize(this);
 
 To generate bar code use this
-Bitmap bitmap = Encoder.generateBarCode_general("some text")
+Bitmap bitmap = encoder.generateBarCode_general("some text")
 for more specific types of bar codes use
 generate_EAN_8 , generate_EAN_13, generate_QR_CODE, generate_CODABAR, etc
 
